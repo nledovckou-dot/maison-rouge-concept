@@ -1,0 +1,59 @@
+/* The room and cocktail are one fixed photograph. The moving light ends at its photographed rim. */
+.hero__room,
+.entered .hero__room {
+  transform: none;
+  transition: none;
+}
+
+.hero__copy { width: min(63%, 890px); }
+.hero__copy .eyebrow { margin-bottom: 1.7rem; }
+.hero h1 {
+  font: 500 clamp(4.8rem, 7.4vw, 8.5rem)/.85 var(--display);
+  letter-spacing: -.045em;
+}
+.hero h1 em {
+  margin-left: 0;
+  font-size: 1em;
+  font-weight: 400;
+}
+.hero__lead {
+  max-width: 38ch;
+  margin: 2.25rem 0 0;
+  color: #f8eadd;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.55;
+  text-wrap: balance;
+  text-shadow: 0 2px 18px rgba(14, 1, 5, .45);
+}
+.hero__lead span { display: block; }
+
+@media (max-width: 900px) {
+  .hero__copy { width: min(80%, 620px); }
+  .hero h1 { font-size: clamp(4.7rem, 10vw, 7rem); }
+  .hero__lead { max-width: 34ch; }
+}
+@media (max-width: 650px) {
+  .hero__room { object-position: 75% center; }
+  .hero__copy { top: 30%; left: 1.4rem; width: calc(100% - 2.8rem); }
+  .hero h1 { font-size: clamp(4.2rem, 15vw, 6rem); }
+  .hero__lead {
+    display: block;
+    margin-top: 1.55rem;
+    max-width: 33ch;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+  .hero__actions { margin-top: 1.5rem; }
+}
+
+/* Keep the introduction below the fixed header when browser chrome leaves less height. */
+@media (max-height: 720px) {
+  .hero__copy .eyebrow { margin-bottom: 1rem; }
+  .hero__lead { margin-top: 1.25rem; }
+  .hero__actions { margin-top: 1.25rem; }
+}
+@media (max-width: 650px) and (max-height: 720px) {
+  .hero h1 { font-size: 3.5rem; }
+  .hero__lead, .hero__actions { margin-top: 1rem; }
+}
